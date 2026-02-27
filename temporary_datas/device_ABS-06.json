@@ -1,0 +1,38 @@
+[
+  {
+    "status": "operating",
+    "device_id": "ABS-06",
+    "input_ppm": 140000,
+    "output_ppm": 12600,
+    "efficiency": 91.0,
+    "flow_rate": 2450.0,
+    "temp": 48.0,
+    "pressure": 1.05,
+    "energy_cons": 0.32,
+    "runtime": 4200
+  },
+  {
+    "status": "warning",
+    "device_id": "ABS-06",
+    "input_ppm": 158000,
+    "output_ppm": 23700,
+    "efficiency": 85.0,
+    "flow_rate": 2580.0,
+    "temp": 52.0,
+    "pressure": 1.18,
+    "energy_cons": 0.48,
+    "runtime": 4201
+  },
+  {
+    "status": "error",
+    "device_id": "ABS-06",
+    "input_ppm": 180000,
+    "output_ppm": 54000,
+    "efficiency": 70.0,
+    "flow_rate": 2700.0,
+    "temp": 58.0,
+    "pressure": 1.30,
+    "energy_cons": 0.65,
+    "runtime": 4202
+  }
+]
