@@ -48,7 +48,7 @@ tcpServer.listen(PORT_TCP, () => {
 });
 
 const webServer = app.listen(PORT_WEB, () => {
-    logger.info(`[READY] 통합 웹 대시보드 가동: http://192.168.5.106:${PORT_WEB}`);
+    logger.info(`[READY] 통합 웹 대시보드 가동: http://${process.env.SERVER_IP}:${PORT_WEB}`);
 });
 
 process.on('SIGINT', () => {

@@ -5,7 +5,7 @@ const path = require('path');
 // ex) co2_machine.js ABS-07
 const deviceId = process.argv[2] || 'ABS-01'; 
 const dataPath = path.join(__dirname, 'temporary_datas', `device_${deviceId}.json`);
-const SERVER_IP = '192.168.5.106';
+const SERVER_IP = process.env.SERVER_IP || '127.0.0.1';
 const SERVER_PORT = 5000;
 
 let client = null;
