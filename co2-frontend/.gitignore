@@ -1,24 +1,12 @@
-# Logs
-logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
+# 빌드 결과물 (Vite/React 빌드 시 생성)
+dist/
+dist-ssr/
 
-node_modules
-dist
-dist-ssr
+# 로컬 환경 변수 설정 파일 (API 주소 등)
 *.local
+.env.development.local
+.env.test.local
+.env.production.local
 
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
-.DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+# 프론트엔드 전용 의존성
+node_modules/
