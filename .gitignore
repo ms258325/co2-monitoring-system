@@ -1,6 +1,11 @@
+# Logs & Data
+logs/*
+!logs/.gitkeep
+*.log
+*.csv
+
 # 설정 파일 (보안)
 .env
-
 node_modules/
 
 # 운영체제 생성 파일
