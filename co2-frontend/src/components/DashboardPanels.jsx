@@ -59,11 +59,16 @@ export const EnergyBar = ({ history, deviceId }) => (
 
 // 통합 패널 컴포넌트
 const DashboardPanels = ({ deviceId, data, history }) => {
+  const calcEff = data.input_ppm > 0 
+    ? ((data.input_ppm - data.output_ppm) / data.input_ppm * 100) 
+    : 0;
+
   return (
     <div className="dashboard-grid">
       <section className="panel">
         <label>CAPTURE EFFICIENCY</label>
-        <EfficiencyGauge value={data.efficiency} />
+        {/* [수정] 계산된 값을 전달 (소수점 1자리) */}
+        <EfficiencyGauge value={parseFloat(calcEff.toFixed(1))} />
       </section>
 
       <section className="panel">

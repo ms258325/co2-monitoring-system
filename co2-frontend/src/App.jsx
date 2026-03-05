@@ -47,7 +47,7 @@ function App() {
       {/* 공통 헤더  */}
       <header className="header-bar" style={{ position: 'sticky', top: 0, zIndex: 1000, background: 'var(--bg-color)', display: 'flex', justifyContent: 'space-between' }}>
         <div>
-          <h1> CO2 통합 관제 시스템</h1>
+          <h1> CO2 습식 포집 공정 모니터링 시스템</h1>
           <div style={{ color: '#7b7b7b' }}>연결된 장치: <strong>{deviceIds.length}</strong> 대</div>
         </div>
 
