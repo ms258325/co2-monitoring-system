@@ -1,6 +1,6 @@
 import React from 'react';
 
-// --- 1. 시각화 조각 (DetailedPFD) ---
+// --- 1. 시각화 조각 ---
 const DetailedPFD = ({ data }) => {
   // 효율 값 실시간 계산 로직
   const calcEff = data.input_ppm > 0 
@@ -98,7 +98,6 @@ const DetailedPFD = ({ data }) => {
         <text x="645" y="235" textAnchor="middle" className="info-val" fill={cols.ene}>{data.energy_cons} MWh/t</text>
 
         {/* 효율 요약 박스 */}
-        {/* 테두리(stroke) 색상을 흡수탑/재생탑과 같은 연한 회색(#64748b)으로 고정 */}
         <rect x="780" y="140" width="180" height="110" rx="12" fill="#1e293b" stroke="#64748b" strokeWidth="3" />
         <text x="870" y="175" textAnchor="middle" className="info-label" fill={cols.eff}>포집 효율 (Calculated)</text>
         <text x="870" y="215" textAnchor="middle" style={{fontSize: '32px', fontWeight: '900'}} fill={cols.eff}>

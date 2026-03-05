@@ -67,7 +67,6 @@ const DashboardPanels = ({ deviceId, data, history }) => {
     <div className="dashboard-grid">
       <section className="panel">
         <label>CAPTURE EFFICIENCY</label>
-        {/* [수정] 계산된 값을 전달 (소수점 1자리) */}
         <EfficiencyGauge value={parseFloat(calcEff.toFixed(1))} />
       </section>
 

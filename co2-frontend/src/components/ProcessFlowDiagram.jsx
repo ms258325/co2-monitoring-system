@@ -1,7 +1,7 @@
 import React from 'react';
 
 const ProcessFlowDiagram = ({ data }) => {
-  // [수정] 효율 실시간 계산 로직
+  // 효율 실시간 계산 로직
   const calcEff = data.input_ppm > 0 
     ? ((data.input_ppm - data.output_ppm) / data.input_ppm * 100) 
     : 0;
@@ -35,7 +35,6 @@ const ProcessFlowDiagram = ({ data }) => {
   const inputCol = getLevelColor(data.input_ppm, 'input');
   const flowCol = getLevelColor(data.flow_rate, 'flow');
   const tempCol = getLevelColor(data.temp, 'temp');
-  // [수정] 계산된 효율값으로 색상 결정
   const effCol = getLevelColor(calcEff, 'eff');
 
   return (
@@ -78,7 +77,6 @@ const ProcessFlowDiagram = ({ data }) => {
 
       <path d="M 600,210 L 768,210" style={pipeStyle(effCol)} />
       <text x="620" y="195" fontSize="13" fontWeight="bold" fill={effCol}>
-        {/* [수정] 계산된 효율값 출력 */}
         EFFICIENCY: {calcEff.toFixed(1)}%
       </text>
       <polygon points="780,210 768,204 768,216" fill={effCol} />
